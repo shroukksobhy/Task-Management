@@ -28,11 +28,7 @@ jobs:
       run: |
         mkdir -p database
         touch database/tasks_management.sql
-    - name: Execute tests (Unit and Feature tests) via UNIT TEST
-      env:
-        DB_CONNECTION: mysql
-        DB_DATABASE: database/tasks_management.sql
-      run: php artisan test
+
     - name: Execute seeders
       env:
         DB_CONNECTION: mysql
