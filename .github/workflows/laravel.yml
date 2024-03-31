@@ -28,10 +28,13 @@ jobs:
       run: |
         mkdir -p database
         touch database/tasks_management.sql
-    - name: cache
+    - name: cache claer
       run: php artisan cache:clear
+    - name: route clear
       run: php artisan route:clear
+    - name: config clear
       run: php artisan config:clear
+    - name: view clear
       run: php artisan view:clear
     - name: Execute tests (Unit and Feature tests) via UNIT TEST
       env:
